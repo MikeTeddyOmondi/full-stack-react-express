@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1717245642425,
+      "tag": "0000_busy_vin_gonzales",
+      "breakpoints": true
+    }
+  ]
+}
