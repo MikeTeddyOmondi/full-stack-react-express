@@ -1,0 +1,35 @@
+# Ignore node_modules for both frontend and backend
+./node_modules
+./logs
+
+# Ignore logs
+*.log
+**/*.log
+
+# Ignore temporary files and directories
+*.temp
+*.tmp
+*.swp
+*.swo
+*.bak
+*.orig
+*.old
+
+# Ignore specific OS generated files and directories
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Ignore build output
+./build
+./dist
+
+# Ignore Dockerfile and Docker-related files
+Dockerfile
+.dockerignore
+
+# Ignore any other unnecessary files
+*.md
+*.env
+.env.*
