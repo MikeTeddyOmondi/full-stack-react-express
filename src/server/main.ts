@@ -23,6 +23,7 @@ ViteExpress.config({
 
 // Middlewares
 app.use(express.static("public")); // Set static folder
+app.use(express.static("dist"));
 app.use(express.json());
 app.use(
   cors({
@@ -197,16 +198,18 @@ app.put("/api/tasks/:pid", async (req, res, next) => {
 if (process.env.NODE_ENV === "production") {
   const __dirname = path.resolve();
   app.use(express.static(path.join(__dirname, "dist")));
-
   app.get("*", (req, res) =>
     res.sendFile(path.resolve(__dirname, "..", "..", "dist", "index.html"))
   );
 } else {
   // 404 route
-  app.get("*", (req, res, next) => {
-    logger.error("Resource Not Found!");
-    next(createError(500, `Resource Not Found!`));
-  });
+  // app.get("*", (req, res, next) => {
+  //   logger.error("Resource Not Found!");
+  //   next(createError(500, `Resource Not Found!`));
+  // });
+  app.get("/", (req, res) =>
+    res.sendFile(path.resolve(cwd(), "dist", "index.html"))
+  );
 }
 
 // Error Middleware

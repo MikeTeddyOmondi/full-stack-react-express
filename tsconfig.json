@@ -14,14 +14,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "outDir": "./dist",
+    // "outDir": "./dist",
     "paths": {
       "@/*": ["./src/*"],
       "$/*": ["./*"]
     }
   },
   "exclude": ["node_modules"],
-  "include": ["src/**/*.ts", "src/client/components/AuthContext.tsx"],
+  // "include": ["src/**/*.ts", "src/client/components/AuthContext.tsx"],
   "tsc-alias": {
     "resolveFullPaths": true,
     "verbose": false
